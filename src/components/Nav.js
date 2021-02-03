@@ -9,9 +9,9 @@ function Nav() {
             <a href="#" class="logo">Les plantes</a>
             <ul>
                <li><Link to='/' >Home</Link></li> 
-               <li><Link to='/aromatherapie' >Aromatherapie </Link></li> 
-               <li><Link to='/homeopathie' >Homeopathie </Link></li> 
-               <li><Link to='/superaliments' >Superaliments </Link></li> 
+               <li><Link to='/plantes/aromatherapie' >Aromatherapie </Link></li> 
+               <li><Link to='/plantes/homeopathie' >Homeopathie </Link></li> 
+               <li><Link to='/plantes/superaliments' >Superaliments </Link></li> 
             </ul>
         </div>
     )

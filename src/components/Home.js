@@ -16,7 +16,7 @@ function Home() {
       </div>
       <div className="imageHome">
         <div>
-          <Link to="/aromatherapie">
+          <Link to="/plantes/aromatherapie">
             <img
               src="https://www.insphy.com/I-Grande-3275-qu-est-ce-que-l-aromatherapie-notre-definition.net.jpg"
               alt="1"
@@ -25,22 +25,22 @@ function Home() {
           <h3>L'aromatherapie </h3>
         </div>
         <div>
-          <Link to="/superaliment">
-            <img
-              src="https://www.bioalaune.com/img/article/7142-10-super-aliments-qui-vous-aident-rester-jeune.png"
-              alt="2"
-            />
-          </Link>
-          <h3>Les superaliments </h3>
-        </div>
-        <div>
-          <Link to="/homeopathie">
+        <Link to="/plantes/superaliments">
             <img
               src="https://blog.soin-et-nature.com/app/uploads/2016/06/homeopathie-utiliser.jpg"
               alt="3"
             />
           </Link>
           <h3>L'homeopathie</h3>
+        </div>
+        <div>
+        <Link to="/plantes/superaliments">
+            <img
+              src="https://www.bioalaune.com/img/article/7142-10-super-aliments-qui-vous-aident-rester-jeune.png"
+              alt="2"
+            />
+          </Link>
+          <h3>Les superaliments </h3>
         </div>
       </div>
     </div>

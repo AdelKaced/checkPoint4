@@ -1,0 +1,56 @@
+.section {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.sectionplantes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameplante {
+  font-size: 2em;
+}
+
+.detailplante {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.detailplante img {
+  width: 300px;
+  height: 300px;
+}
+
+.detailsPara > p {
+  text-align: justify;
+  line-height: 2em;
+}
+
+.detailsPara {
+  width: 60%;
+}
+
+.detailsplante {
+  margin: 3em 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.detailsplante img {
+  width: 200px;
+  height: 200px;
+}
+
+.detailsplante p {
+  width: 400px;
+  text-align: justify;
+}
+
+h3 {
+  margin-bottom: 1.5em;
+}
