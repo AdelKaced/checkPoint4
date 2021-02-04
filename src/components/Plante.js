@@ -33,7 +33,7 @@ function Plante(props) {
         </div>
       </div>
       <div className="detailsplante">
-        <div>
+        <div className="blocdetails">
           <img src="https://static.passeportsante.net/200x200/i87141-baies-de-goji-pour-maigrir-les-bienfaits-des-baies-de-goji.jpeg"/>
           <h3>LA BAIE DE GOJI</h3>
           <p>
@@ -46,14 +46,14 @@ function Plante(props) {
             la pulpe.
           </p>
         </div>
-        <div>
+        <div className="blocdetails">
           <img src="https://img.farmforage.com/img/agro-2019/podborka-luchshih-receptov-zagotovki-ryabini-aronii-chernoplodnoj-na-zimu.jpg" />
           <h3>LA BAIE D'ARONIA</h3>
           <p>
           L’aronia (Aronia melanocarpa) est un arbuste originaire d’Amérique du nord de la famille des Rosacées, pouvant atteindre jusqu’à 2,50 mètres de hauteur ou de largeur. Ses fleurs blanches laissent place en automne à des fruits, les baies d’aronia. Ces baies sont de forme arrondie, noires et sont similaires aux cassis. Très parfumées et riches en antioxydants, les baies d'Aronia peuvent être utiliser cuites, en jus ou tout simplement crues.
           </p>
         </div>
-        <div>
+        <div className="blocdetails">
           <img src="https://i.pinimg.com/originals/f9/e7/89/f9e78900e40eb92c01d8e09cc46915aa.jpg" />
           <h3>LA CRANBERRY</h3>
           <p>

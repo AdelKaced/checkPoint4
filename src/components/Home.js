@@ -22,7 +22,7 @@ function Home() {
               alt="1"
             />
           </Link>
-          <h3>L'aromatherapie </h3>
+          <h3>Les huiles essentielles</h3>
         </div>
         <div>
         <Link to="/plantes/superaliments">
