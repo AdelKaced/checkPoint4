@@ -1,7 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Home() {
+  const [categories, setCategories] = useState('');
+
+  useEffect(() => {
+    const url = 'http://localhost:5000/categories';
+    axios
+      .get(url)
+      .then((res) => setCategories(res.data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className="homePage">
       <div className="paraHome">
@@ -15,33 +26,15 @@ function Home() {
         <h3>Tu decouvriras comment les consommer</h3>
       </div>
       <div className="imageHome">
-        <div>
-          <Link to="/plantes/aromatherapie">
-            <img
-              src="https://www.insphy.com/I-Grande-3275-qu-est-ce-que-l-aromatherapie-notre-definition.net.jpg"
-              alt="1"
-            />
-          </Link>
-          <h3>Les huiles essentielles</h3>
-        </div>
-        <div>
-        <Link to="/plantes/superaliments">
-            <img
-              src="https://blog.soin-et-nature.com/app/uploads/2016/06/homeopathie-utiliser.jpg"
-              alt="3"
-            />
-          </Link>
-          <h3>L'homeopathie</h3>
-        </div>
-        <div>
-        <Link to="/plantes/superaliments">
-            <img
-              src="https://www.bioalaune.com/img/article/7142-10-super-aliments-qui-vous-aident-rester-jeune.png"
-              alt="2"
-            />
-          </Link>
-          <h3>Les superaliments </h3>
-        </div>
+        {categories &&
+          categories.map((cat) => (
+            <div>
+              <Link to={`/plantes/${cat.idCategorie}`}>
+                <img src={cat.picture} alt={cat.name} />
+              </Link>
+              <h3>{cat.name}</h3>
+            </div>
+          ))}
       </div>
     </div>
   );

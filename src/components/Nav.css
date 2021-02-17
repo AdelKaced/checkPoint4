@@ -1,29 +1,58 @@
 .nav {
-    position: fixed;
-    width: 100% ;
-    background-color:black;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav ul {
-    position: relative;
-    display: flex;
-    list-style: none;
-    padding: 20px
-  }
+  position: relative;
+  display: flex;
+  list-style: none;
+  padding: 20px;
+}
 
 .nav li a {
-    text-decoration: none;
-    color : white;
-    margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
 }
 
 .logo {
-    text-decoration: none;
-    color: white;
-    margin: 20px
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+}
+
+.iconMenu {
+  filter: invert();
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .iconMenu {
+    display: block;
+  }
+  .nav {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    background-color: black;
+  }
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.8s ease;
+}
+}
+.show {
+    transition: 0.8s ease;
+    height : 100vh !important;
+    background-color: green;
+    width: 70%;
 }
