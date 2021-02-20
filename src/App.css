@@ -44,6 +44,7 @@ hr {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .imageHome img {
@@ -63,5 +64,12 @@ margin-bottom: 1.2em
 }
 .paraHome {
   margin:0 20px
+}
+
+.addCat{
+background-color :black;
+ width :250px;
+ height :250px;
+ color : white
 }
 

@@ -1,0 +1,27 @@
+.products {
+  padding-top: 10em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products img {
+  width: 200px;
+}
+
+.products h3 {
+  font-size: 0.8em;
+  width: 200px;
+  text-align: center;
+}
+
+.items div {
+  text-align: center;
+}
+
+.items button {
+    background-color : white;
+    border : none ;
+    padding : 10px;
+    border-bottom : grey solid 1px
+}

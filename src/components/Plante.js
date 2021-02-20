@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import './Plante.css';
@@ -13,7 +14,7 @@ function Plante(props) {
     // eslint-disable-next-line
   }, [id]);
 
-  console.log('plantData', planteData);
+  console.log('plantData', planteData[0]);
   console.log(id);
 
   return (
@@ -27,6 +28,7 @@ function Plante(props) {
       </div>
       <div className="plantrubrique">
       {planteData && planteData.map(data => 
+      <Link to={`${data.idPlante}/products`}>
       <div className="detailsplante">
         <div className="blocdetails">
           <img
@@ -38,7 +40,8 @@ function Plante(props) {
             {data.descPlant}
           </p>
         </div>
-      </div>)}
+      </div>
+      </Link>)}
       </div>
     </div>
   );

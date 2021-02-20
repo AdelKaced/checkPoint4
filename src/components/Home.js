@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { FaPlus } from 'react-icons/fa';
 
 function Home() {
   const [categories, setCategories] = useState('');
+  const [add, setAdd] = useState(false);
+  const [theme, setTheme] = useState(false);
+  const [description, setDescription] = useState(false);
 
   useEffect(() => {
     const url = 'http://localhost:5000/categories';
@@ -35,6 +39,52 @@ function Home() {
               <h3>{cat.name}</h3>
             </div>
           ))}
+        <div>
+          <button className="addCat" onClick="">
+            <div onClick={() => setAdd(true)}>
+              {!add ? (
+                <div>
+                  <FaPlus />
+                </div>
+              ) : (
+                <div>
+                  {!theme ? (
+                    <div>
+                      <label>Choisis un theme</label>
+                      <input type="text" />
+                      <button onClick={() => setTheme(true)}> Valide </button>
+                    </div>
+                  ) : (
+                    <div>
+                      {!description ? (
+                        <div>
+                          <label>Decris mois le theme </label>
+                          <input type="textArea" />
+                          <button onClick={() => setDescription(true)}>
+                            {' '}
+                            Valide{' '}
+                          </button>
+                        </div>
+                      ) : (
+                        <div>
+                          <label>choisis une image </label>
+                          <input type="text" />
+                          <button 
+                          // onClick={() => setDescription(true)}
+                          >
+                            {' '}
+                            Valide{' '}
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </button>
+          <h3>Ajoute une catégorie</h3>
+        </div>
       </div>
     </div>
   );
